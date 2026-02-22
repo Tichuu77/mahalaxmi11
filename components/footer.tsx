@@ -81,9 +81,9 @@ export function Footer() {
                 <Mail size={14} className="text-white" />
                rajeshnagfase717@gmail.com
               </li>
-              <li className="flex items-start gap-2 text-white/60 text-lg">
+              <li className="flex items-start gap-2 text-white/60 text-sm">
                 <MapPin size={14} className="text-white mt-0.5 flex-shrink-0" />
-                123 Luxury Avenue
+               ADRESS MDHE :- FLAT NO. 103, 104, LAXMIVIHAR APARTMENT, BESIDE HOTEL AIRPORT CENTER POINT, WARDHA ROAD, SOMALWADA, NAGPUR-440025
               </li>
             </ul>
           </div>

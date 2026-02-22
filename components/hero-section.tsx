@@ -12,6 +12,7 @@ const navLinks = [
 
 export default function HeroSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+   const [isLoaded, setIsLoaded] = useState(true);
   const [navLinksState, setNavLinksState] = useState(navLinks);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -159,7 +160,7 @@ export default function HeroSection() {
       <section
         className="relative min-h-screen flex items-center overflow-hidden"
         style={{
-          backgroundImage: 'url("/gallery_9.jpg")',
+          backgroundImage: 'url("/hero-bg.jpeg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: isMobile ? 'scroll' : 'fixed',
@@ -178,7 +179,7 @@ export default function HeroSection() {
         <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20 relative z-10">
           <div className="max-w-2xl space-y-6 sm:space-y-8">
             {/* Top Badge */}
-            <div
+            {/* <div
               className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded shadow-lg"
               style={{
                 backgroundColor: 'var(--background)',
@@ -191,7 +192,7 @@ export default function HeroSection() {
               >
                 MOUZA SUMTHANA
               </span>
-            </div>
+            </div> */}
 
             {/* Main Heading */}
             <h1
@@ -209,7 +210,7 @@ export default function HeroSection() {
             </h1>
 
             {/* Subtitle - Optional enhancement */}
-            <p 
+            {/* <p 
               className="text-base sm:text-lg md:text-xl max-w-xl"
               style={{
                 color: 'var(--primary-foreground)',
@@ -218,7 +219,58 @@ export default function HeroSection() {
               }}
             >
               Your Dream Home Awaits
-            </p>
+            </p> */}
+
+              {/* Stats Row */}
+            <div
+              className={`transition-all duration-700 delay-300 grid grid-cols-2 gap-3 sm:gap-4 md:gap-6 mt-6 sm:mt-8 ${
+                isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
+            >
+              <div className="bg-white/10  border border-white/20 rounded-lg sm:rounded-xl md:rounded-2xl p-4 sm:p-5 md:p-6 text-center">
+                <div 
+                  className="font-bold mb-1 sm:mb-2"
+                  style={{
+                    fontSize: 'clamp(1.5rem, 5vw, 2.5rem)',
+                    color: '#ffffff',
+                    fontFamily: 'var(--font-heading)'
+                  }}
+                >
+                  70+
+                </div>
+                <div 
+                  className="text-white/80"
+                  style={{
+                    fontSize: 'clamp(0.75rem, 2vw, 1rem)',
+                    fontFamily: 'var(--font-heading)'
+                  }}
+                >
+                  Projects
+                </div>
+              </div>
+              
+              <div className="bg-white/10  border border-white/20 rounded-lg sm:rounded-xl md:rounded-2xl p-4 sm:p-5 md:p-6 text-center">
+                <div 
+                  className="font-bold mb-1 sm:mb-2"
+                  style={{
+                    fontSize: 'clamp(1.5rem, 5vw, 2.5rem)',
+                    color: '#ffffff',
+                    fontFamily: 'var(--font-heading)'
+                  }}
+                >
+                  17111+
+                </div>
+                <div 
+                  className="text-white/80"
+                  style={{
+                    fontSize: 'clamp(0.75rem, 2vw, 1rem)',
+                    fontFamily: 'var(--font-heading)'
+                  }}
+                >
+                  Happy Clients
+                </div>
+              </div>
+            </div>
 
             {/* CTA Button */}
             <div className="pt-2 sm:pt-4">
@@ -238,6 +290,8 @@ export default function HeroSection() {
               </a>
             </div>
           </div>
+
+         
         </div>
       </section>
 
